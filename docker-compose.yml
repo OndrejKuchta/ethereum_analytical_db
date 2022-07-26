@@ -26,14 +26,6 @@ services:
       - ./clickhouse:/var/lib/clickhouse:Z
     restart: always
 
-  parity:
-    image: openethereum/openethereum:latest
-    ports:
-      - "8545:8545"
-    command: --mode=active --jsonrpc-interface=all --tracing=on --db-path /db
-    volumes:
-      - ./parity:/db:Z
-
   grafana:
     network_mode: host
     build: ./grafana/
