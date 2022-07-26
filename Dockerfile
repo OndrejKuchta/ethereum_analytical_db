@@ -3,6 +3,9 @@ FROM ubuntu:22.04
 ENV LC_ALL=C.UTF-8
 ENV LANG=C.UTF-8
 
+ENV TZ=Europe/Berlin
+RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
+
 RUN apt-get update && \
     apt-get install -y libcurl4-openssl-dev cmake libssl-dev build-essential automake pkg-config libtool libffi-dev libgmp-dev libyaml-cpp-dev && \
     apt-get install -y git && \
