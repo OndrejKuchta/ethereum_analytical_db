@@ -10,7 +10,6 @@ services:
       LANG: C.UTF-8
     depends_on:
       - clickhouse
-      - parity
     command: start #prepare-database
     restart: always
 
