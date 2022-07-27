@@ -31,7 +31,7 @@ services:
     depends_on:
       - clickhouse
     ports:
-      - "3001:3001"
+      - "3010:3010"
     restart: always
 
   clickhouse_client:
