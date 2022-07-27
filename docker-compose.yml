@@ -26,10 +26,11 @@ services:
     restart: always
 
   grafana:
-    network_mode: host
     build: ./grafana/
     depends_on:
       - clickhouse
+    ports:
+      - 3010:3010
     restart: always
 
   clickhouse_client:
