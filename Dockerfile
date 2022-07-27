@@ -20,7 +20,7 @@ RUN add-apt-repository ppa:deadsnakes/ppa && \
     apt-get install -y python3.8 libpython3.8-dev
     
 
-RUN apt-get install python3-pip
+RUN apt-get install -y python3-pip
 
 RUN git clone https://github.com/ethereum/pyethereum && \
     cd ./pyethereum && \
