@@ -12,7 +12,7 @@ RUN apt-get update && \
     apt-get install -y wget && apt-get install -y curl && \
     apt-get install -y software-properties-common
 
-RUN apt-get install -y python3-distutils && \
+RUN apt-get install -y python3.9-distutils && \ 
     apt-get install -y python3-apt
     
 RUN add-apt-repository ppa:deadsnakes/ppa && \
