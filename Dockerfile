@@ -12,11 +12,13 @@ RUN apt-get update && \
     apt-get install -y wget && apt-get install -y curl && \
     apt-get install -y software-properties-common
 
+RUN apt-get install -y python3-distutils && \
+    apt-get install -y python3-apt
+    
 RUN add-apt-repository ppa:deadsnakes/ppa && \
     apt-get update && \
-    apt-get install -y python3.9 libpython3.9-dev && \
-    apt-get install -y python3-distutils && \
-    apt-get install -y python3-apt
+    apt-get install -y python3.9 libpython3.9-dev
+    
 
 RUN curl https://bootstrap.pypa.io/get-pip.py | python3.9
 
