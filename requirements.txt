@@ -6,6 +6,6 @@ nose
 web3
 numpy==1.23.1
 pandas==1.4.3
-clickhouse-driver[numpy]
+clickhouse-driver[numpy]==0.2.4
 pyelasticsearch
 httpretty
