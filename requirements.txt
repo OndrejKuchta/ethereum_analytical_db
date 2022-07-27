@@ -4,8 +4,8 @@ requests
 pygtrie
 nose
 web3
-numpy
-pandas
+numpy==1.20.1
+pandas==1.4.3
 clickhouse-driver
 pyelasticsearch
 httpretty
