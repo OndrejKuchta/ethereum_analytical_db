@@ -2,6 +2,8 @@ FROM grafana/grafana-oss:latest
 
 ENV GF_PLUGINS_ALLOW_LOADING_UNSIGNED_PLUGINS=vertamedia-clickhouse-datasource 
 
+USER root
+
 RUN apk --no-cache add curl
 
 COPY ./configure_grafana.sh /
