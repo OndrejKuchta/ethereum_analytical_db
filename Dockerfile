@@ -37,4 +37,4 @@ RUN pip3 install --default-timeout=100 -r ./requirements.txt
 
 ADD . .
 
-ENTRYPOINT ["python3.8", "./extractor.py"]
+ENTRYPOINT ["python", "./extractor.py"]
