@@ -26,14 +26,14 @@ RUN git clone https://github.com/ethereum/pyethereum && \
     cd ./pyethereum && \
     git checkout develop && \
     git checkout 3d5ec14032cc471f4dcfc7cc5c947294daf85fe0 && \
-    pip install --default-timeout=100 . && \
+    pip3 install --default-timeout=100 . && \
     cd ../
 
 WORKDIR /usr/src/core
 
 ADD ./requirements.txt .
 
-RUN pip install --default-timeout=100 -r ./requirements.txt
+RUN pip3 install --default-timeout=100 -r ./requirements.txt
 
 ADD . .
 
