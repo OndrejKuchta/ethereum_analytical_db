@@ -2,7 +2,7 @@ FROM grafana/grafana:latest
 
 ENV GF_PLUGINS_ALLOW_LOADING_UNSIGNED_PLUGINS=vertamedia-clickhouse-datasource 
 
-RUN apt-get install -y curl
+RUN apt install -y curl
 
 COPY ./configure_grafana.sh /
 
