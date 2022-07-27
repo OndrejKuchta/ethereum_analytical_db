@@ -12,29 +12,29 @@ RUN apt-get update && \
     apt-get install -y wget && apt-get install -y curl && \
     apt-get install -y software-properties-common
 
-RUN apt-get install -y python3.9-distutils && \ 
+RUN apt-get install -y python3-distutils && \ 
     apt-get install -y python3-apt
     
 RUN add-apt-repository ppa:deadsnakes/ppa && \
     apt-get update && \
-    apt-get install -y python3.9 libpython3.9-dev
+    apt-get install -y python3.8 libpython3.8-dev
     
 
-RUN curl https://bootstrap.pypa.io/get-pip.py | python3.9
+RUN curl https://bootstrap.pypa.io/get-pip.py | python3.8
 
 RUN git clone https://github.com/ethereum/pyethereum && \
     cd ./pyethereum && \
     git checkout develop && \
     git checkout 3d5ec14032cc471f4dcfc7cc5c947294daf85fe0 && \
-    pip3.9 install --default-timeout=100 . && \
+    pip3 install --default-timeout=100 . && \
     cd ../
 
 WORKDIR /usr/src/core
 
 ADD ./requirements.txt .
 
-RUN pip3.9 install --default-timeout=100 -r ./requirements.txt
+RUN pip3 install --default-timeout=100 -r ./requirements.txt
 
 ADD . .
 
-ENTRYPOINT ["python3.9", "./extractor.py"]
+ENTRYPOINT ["python3.8", "./extractor.py"]
