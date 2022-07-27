@@ -1,6 +1,6 @@
 #!/bin/bash
 
-GRAFANA_URL=${GRAFANA_URL:-http://localhost:3001}
+GRAFANA_URL=${GRAFANA_URL:-http://localhost:3010}
 DATASOURCES_PATH=${DATASOURCES_PATH:-/datasources}
 DASHBOARDS_PATH=${DASHBOARDS_PATH:-/dashboards}
 
